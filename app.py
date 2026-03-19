@@ -1,16 +1,15 @@
 import streamlit as st
-import cv2
 import sys
 
 st.title("בדיקת מערכת - בניה")
 
 try:
     import cv2
-    st.success("OpenCV נטען בהצלחה!")
+    st.success(f"OpenCV נטען בהצלחה! גרסה: {cv2.__version__}")
 except Exception as e:
-    st.error(f"שגיאה: {e}")
+    st.error(f"שגיאה בטעינת OpenCV: {e}")
 
 st.write(f"גרסת פייתון: {sys.version}")
 
 st.divider()
-st.write("אם אתה רואה את זה, האתר עובד. עכשיו אפשר להעלות את הקוד של הטרקר.")
+st.write("בניה, אם אתה רואה את זה - ניצחנו את הדף הלבן!")
